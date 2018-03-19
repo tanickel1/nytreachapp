@@ -1,0 +1,27 @@
+{
+  "name": "nytreachapp",
+  "version": "1.0.0",
+  "description": "New York Times- React Based App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanickel1/nytreachapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanickel1/nytreachapp/issues"
+  },
+  "homepage": "https://github.com/tanickel1/nytreachapp#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.11"
+  },
+  "devDependencies": {}
+}
