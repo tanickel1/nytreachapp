@@ -1,8 +1,8 @@
-var express = require('express');
+const express = require('express');
 
-var router = express.Router();
+const router = express.Router();
 
-var Article = require('../models/article');
+const Article = require('../models/article');
 
 router.get('/api/saved', function (req, res) {
 	Article.find({}, function (err, data) {
@@ -25,16 +25,16 @@ router.get('/api/saved', function (req, res) {
 });
 
 router.post('/api/saved', function (req) {
-	var body = req.body;
+	const body = req.body;
 
-	var newArticle = {
+	const newArticle = {
 		title: body.title,
 		url: body.url,
 		date: body.date,
 		articleID: body.articleID
 	};
 
-	var query = {articleID: bodyarticleID};
+	const query = {articleID: bodyarticleID};
 
 	Article.findOneAndUpdate(query, newArticle, {upsert: true}, function (err) {
 		if (err) {
@@ -44,7 +44,7 @@ router.post('/api/saved', function (req) {
 });
 
 router.delete('/api/saved/:articleID', function (req) {
-	var articleID = req.params.articleID;
+	const articleID = req.params.articleID;
 	Article.remove({articleID: articleID}, function(err) {
 		if (err) {
 			console.log(err);
